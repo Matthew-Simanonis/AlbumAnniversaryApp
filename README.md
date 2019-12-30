@@ -1,5 +1,5 @@
 # AlbumAnniversaryApp
-Will scrape wikipedia HTML to grab Album information (title, artist, release date, URL) and saves to a CSV file. Can also be checked against todays date for anniversaries of album release, and send an email as a reminder.
+Script that scrapes wikipedia HTML to grab information on an album (title, artist, release date, URL) and saves to a CSV file. Can also be checked against todays date for anniversaries of album release, and send an email as a reminder.
 
 This is my first "App"
 
