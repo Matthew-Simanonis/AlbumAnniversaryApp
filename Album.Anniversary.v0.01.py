@@ -93,18 +93,18 @@ def send_mail(dataframe, index):
     artist = dataframe.iloc[index]['artist'].iloc[0]    # Find title, artist, release, URL from dataframe at index
     release = dataframe.iloc[index]['release'].iloc[0]
     URL = dataframe.iloc[index]['URL'].iloc[0]
-    server = smtplib.SMTP('smtp.gmail.com', 587)    # Sever Stuff
+    server = smtplib.SMTP('smtp.gmail.com', 587)    # Server Stuff
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('Youremail@xyz.com', 'password')
+    server.login('Yourmail@xyz.com', 'password')
 
-    subject = 'Happy Anniversary ' + title + '!'
+    subject = 'Happy Anniversary ' + title + '!'            # Subject of Email
     body = f'The album {title} by {artist} was released today in {release[0:4]}\n\n\n\n More info:\n {URL} \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n THIS IS AN AUTOMATICALLY GENERATED EMAIL'
 
     msg = f'Subject:  {subject}\n\n{body}'
     emails = []
-    server.sendmail("Youremail@xyz.com","Youremail@xyz.com",msg)
+    server.sendmail("Yourmail@xyz.com","Theirmail@xyz.com",msg)        # Sending email (From, To, Message)
     print('Email has been sent')
     server.quit()
 
