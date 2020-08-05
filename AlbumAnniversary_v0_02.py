@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
 
-emails = ["msimanonis@gmail.com", "csimanonis@comcast.net", "Nickymcmusic@gmail.com", "b.flanagan17@gmail.com"]
+emails = ["email@email.com"]
 albums = {
     'red hot chili peppers': ['by the way', 'californication', 'stadium arcadium', 'blood sugar sex magik', 'mothers milk', 'the uplift mofo party plan', 'the getaway', 'freaky styley', 'red hot chili peppers', 'one hot minute'], 
     'the beatles' : ['sgt peppers lonely hearts club band', 'abbey road', 'magical mystery tour', 'the beatles', 'revolver', 'Help!', 'rubber soul'],
@@ -199,7 +199,7 @@ def send_mail_img(dataframe, index, email):
     age = year - release_year
     msg = MIMEMultipart()
     msg["To"] = email
-    msg["From"] = 'msimanonis@gmail.com'
+    msg["From"] = 'email@email.com'
     msg["Subject"] = 'Happy Anniversary ' + title + '!'
     body = f'The album {title} by {artist} was released {age} years ago today, in {release_year}!<br><br>More info:<br>{URL}'
     footer =  f'<br><br><br><br><br><br><br><br><br><br><br><br><br> THIS IS AN AUTOMATICALLY GENERATED EMAIL<br><br>Attachment: <br>'
@@ -218,8 +218,8 @@ def send_mail_img(dataframe, index, email):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('msimanonis@gmail.com', 'ouepwzqkbydclmre')
-    server.sendmail("msimanonis@gmail.com", email, msg.as_string())
+    server.login('email@email.com', 'ouepwzqkbydclmre')
+    server.sendmail("email@email.com", email, msg.as_string())
     server.quit()
 
 
